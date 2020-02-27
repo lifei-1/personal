@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.rrz.main.service.mapper.SysUserMapper">
+
+	<resultMap id="BaseResultMap" type="com.rrz.main.model.SysUser">
+		<id column="sys_user_id" property="sysUserId" />
+		<result column="sys_user_name" property="sysUserName" />
+		<result column="sys_user_password" property="sysUserPassword" />
+	</resultMap>
+	
+	<select id="querySysUserList" resultMap="BaseResultMap">
+		select * from sys_user
+	</select>
+	
+</mapper>

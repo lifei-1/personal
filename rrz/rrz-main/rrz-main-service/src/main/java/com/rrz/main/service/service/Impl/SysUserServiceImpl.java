@@ -1,0 +1,25 @@
+package com.rrz.main.service.service.Impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.rrz.main.model.SysUser;
+import com.rrz.main.service.mapper.SysUserMapper;
+import com.rrz.main.service.service.ISysUserService;
+
+@Service
+public class SysUserServiceImpl implements ISysUserService{
+	
+	@Autowired
+	private SysUserMapper sysUserMapper;
+
+	@Override
+	public List<SysUser> querySysUserList() {
+		return sysUserMapper.querySysUserList();
+	}
+
+
+
+}
