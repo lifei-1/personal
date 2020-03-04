@@ -9,10 +9,13 @@
 		<id column="sys_user_id" property="sysUserId" />
 		<result column="sys_user_name" property="sysUserName" />
 		<result column="sys_user_password" property="sysUserPassword" />
+		<result column="create_time" property="createTime" />
+		<result column="edit_time" property="editTime" />
+		<result column="is_del" property="isDel" />
 	</resultMap>
 	
-	<select id="querySysUserList" resultMap="BaseResultMap">
-		select * from sys_user
+	<select id="sysUserLogin" parameterType="String"  resultMap="BaseResultMap">
+		select * from sys_user WHERE sys_user_name = #{username}
 	</select>
 	
 </mapper>
